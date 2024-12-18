@@ -1,42 +1,69 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* src/App.css */
+
+/* General reset and global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.sidebar {
+  width: 25%;
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.main-content {
+  width: 70%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .dashboard-header {
+    font-size: 1.5rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .dashboard-content {
+    flex-direction: column;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .sidebar {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .main-content {
+    width: 100%;
+  }
 }
